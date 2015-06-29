@@ -277,7 +277,7 @@
       // Tear down structure if Select needs to be rebuilt
       var lastID = $select.data('select-id');
       if (lastID) {
-        $select.parent().find('i').remove();
+        $select.parent().find('span.caret').remove();
         $select.parent().find('input').remove();
 
         $select.unwrap();
@@ -331,7 +331,7 @@
       // Wrap Elements
       $select.wrap(wrapper);
       // Add Select Display Element
-      var dropdownIcon = $('<i class="mdi-navigation-arrow-drop-down"></i>');
+      var dropdownIcon = $('<span class="caret">&#9660;</span>');
       if ( $select.is(':disabled') )
         dropdownIcon.addClass('disabled');
 
